@@ -9,3 +9,6 @@ patch: 2.1.1 keeps the SELinux permissive window open through ksud
        copy/install, so a fresh boot without a pre-existing /data/adb/ksud
        can complete the userspace stage (shell domain cannot reach
        /data/adb while enforcing).
+profiles: 9 fix12 kernels derived from
+  https://github.com/Aoki-Shinshi/CVE-2026-99491-FANXIAOCHAO
+  commit a5d970935dac14b7c8b0aff865322c656c8d550e (GPL-2.0-only).

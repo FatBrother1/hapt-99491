@@ -12,6 +12,12 @@ This project would not exist without the public work below.
   https://github.com/Aoki-Shinshi/CVE-2026-99491
   Thanks to **青木信史 (Aoki-Shinshi)** for publishing the exploit and the
   adaptation notes.
+- **Aoki-Shinshi/CVE-2026-99491-FANXIAOCHAO** — public fix12 adaptation used
+  for the 6.18.21 / 6.12.81 / 6.12.69 / 6.12.58-g142 / 6.6.58 /
+  6.1.157-g08de / 6.1.128-g8a49 kernel profiles
+  (commit `a5d970935dac14b7c8b0aff865322c656c8d550e`).
+  https://github.com/Aoki-Shinshi/CVE-2026-99491-FANXIAOCHAO
+  License: GPL-2.0-only.
 
 ## Infrastructure
 

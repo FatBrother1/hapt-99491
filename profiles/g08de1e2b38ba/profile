@@ -1,0 +1,21 @@
+# 6.1.157 g08de1e2b38ba (boot(3).img); worker from local vmlinux; BTF input_dev 1608
+worker_link=0xffffffc008e9db1c
+dev_evbit=40
+dev_swbit=200
+dev_sw=464
+dev_num_vals=1520
+dev_max_vals=1524
+dev_vals=1528
+cred_req=176
+blob_req_min=24
+blob_req_max=32
+avc_req=72
+cred_site_low21=0
+blob_site_low21=0
+avc_site_low21=0xdaecc
+cred_euid_off=0x10
+cred_cap1=0x36
+cred_cap2=0x3a
+cred_cap3=0x3e
+cred_fsuid_off=0x1c
+min_pairs=1

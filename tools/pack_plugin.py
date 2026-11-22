@@ -18,6 +18,8 @@ EXPECTED_EXP_SIZE = 187160
 UPSTREAM = "https://github.com/woshigenm/CVE-2026-99491"
 SNAPSHOT = "https://github.com/Aoki-Shinshi/CVE-2026-99491"
 SNAPSHOT_COMMIT = "db85108f872ba673291790c0fa72d598abaadc02"
+FIX12 = "https://github.com/Aoki-Shinshi/CVE-2026-99491-FANXIAOCHAO"
+FIX12_COMMIT = "a5d970935dac14b7c8b0aff865322c656c8d550e"
 ZIP_DATE = (2026, 11, 22, 0, 0, 0)
 
 
@@ -58,6 +60,9 @@ def source_offer(source_url: str, source_asset: str, source_sha: str) -> str:
         "exp99491 for CVE-2026-99491, derived from\n"
         f"{UPSTREAM} (GPL-2.0-only), with the public adaptation snapshot at\n"
         f"{SNAPSHOT} (commit {SNAPSHOT_COMMIT}).\n"
+        "\n"
+        "Some kernel profiles are derived from the public fix12 adaptation at\n"
+        f"{FIX12} (commit {FIX12_COMMIT}), GPL-2.0-only.\n"
         "\n"
         "It is NOT bundled inside the HAPT APK; the user imports this ZIP as a\n"
         "separate GPL-2.0 plugin. HAPT only executes it and does not link or\n"

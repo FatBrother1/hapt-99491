@@ -3,7 +3,7 @@
 **CVE-2026-99491 HAPT plugin — GPL-2.0-only**
 
 This repository is the open-source, separately distributed component used by
-HAPT for CVE-2026-99491. It contains the exploit source, 39 kernel profiles,
+HAPT for CVE-2026-99491. It contains the exploit source, 48 kernel profiles,
 and a prebuilt plugin ZIP. It does **not** contain the HAPT host application,
 its card system, or any private server.
 
@@ -12,9 +12,9 @@ its card system, or any private server.
 | Path | Content |
 |---|---|
 | `src/` | Complete source used to build `exp99491` (`exp.c`, `ko_patch.c`, `ksu_boot.c/.h`, `vuln_precheck.h`, `ko_syms_5.15.178.txt`) |
-| `profiles/` | 39 per-kernel `profile` + `syms` (one directory per kernel token) |
+| `profiles/` | 48 per-kernel `profile` + `syms` (one directory per kernel token) |
 | `profiles/index.tsv` | release / token / status mapping |
-| `dist/` | Prebuilt `hapt-99491-plugin-2.1.0.zip`, source tarball, checksums |
+| `dist/` | Prebuilt `hapt-99491-plugin-2.1.2.zip`, source tarball, checksums |
 | `tools/pack_plugin.py` | Reproducible plugin ZIP builder |
 | `docs/` | Profile format, build, usage |
 
@@ -44,8 +44,8 @@ See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md) and [NOTICE](NOTICE).
 ## Compatibility
 
 - ABI: `arm64-v8a`
-- Plugin version: `2.1.0`
-- 39 kernel tokens: 1 `verified-local` (Honor PTP-AN70 / 6.6.118-gf171), 37 `static`, 1 `static-ref`
+- Plugin version: `2.1.2`
+- 48 kernel tokens: 1 `verified-local` (Honor PTP-AN70 / 6.6.118-gf171), 46 `static`, 1 `static-ref`
 - 5.10 is not supported (no BTF; upstream does not publish 5.x profiles).
 - The plugin must match the running kernel token. Do not force a profile from
   another build.
@@ -54,7 +54,7 @@ See [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md) and [NOTICE](NOTICE).
 
 1. Install a HAPT build that supports the separate 99491 plugin (1.0.49+ recommended).
 2. Open the **99491** tab → **手动导入 / 调试页**.
-3. Import `dist/hapt-99491-plugin-2.1.0.zip`.
+3. Import `dist/hapt-99491-plugin-2.1.2.zip`.
 4. Connect Shizuku or su, then run.
 
 The plugin ZIP contains `LICENSE` and `SOURCE-OFFER.txt`. There is no server
@@ -73,7 +73,7 @@ python3 tools/pack_plugin.py \
   --exp build/exp \
   --profiles profiles \
   --index profiles/index.tsv \
-  --out dist/hapt-99491-plugin-2.1.0.zip \
+  --out dist/hapt-99491-plugin-2.1.2.zip \
   --source-url https://github.com/FatBrother1/hapt-99491
 ```
 

@@ -1,0 +1,27 @@
+# 6.18.21 gfee; worker from local kernel Image; BTF gfee.btf (input_dev 1600)
+# avc_site: real-device log site=0xffffffd91f9478dc; gfee.elf 0x1478d8 bl
+# kmem_cache_alloc_noprof -> return 0x1478dc (0x147dfc was an inlined xperms alloc).
+worker_link=0xffffffc080f89e50
+kaslr_idx=2286
+dev_evbit=40
+dev_swbit=200
+dev_sw=448
+dev_num_vals=1512
+dev_max_vals=1516
+dev_vals=1520
+cred_req=184
+blob_req_min=40
+blob_req_max=40
+avc_req=72
+trace_layout=618
+cred_site_low21=0x14dca0
+blob_site_low21=0
+avc_site_low21=0x1478dc
+cred_euid_off=0x14
+cred_cap1=0x3e
+cred_cap2=0x42
+cred_cap3=0x46
+cred_fsuid_off=0x20
+min_pairs=1
+selinux_avc=0xffffffc082998ed0
+module_blacklist=0xffffffc08296f9b8

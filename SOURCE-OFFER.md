@@ -7,7 +7,7 @@ The plugin ZIP contains `SOURCE-OFFER.txt` with the same information.
 - Repository: https://github.com/FatBrother1/hapt-99491
 - Source tree: `src/` in this repository
 - Release asset: `CVE-2026-99491-source-20261122.tar.gz`
-- SHA-256: `51f94975624dc99ab404b6127d11241689407faa3092ae9cc32c38e815e70130`
+- SHA-256: `8d94d008c5f0c143a2ab9d30e9589be3c7bff197c4a96cdaf4a3f2d73bbba8e7`
 
 The archive contains the complete source used to build `exp99491`:
 
@@ -20,11 +20,14 @@ The archive contains the complete source used to build `exp99491`:
 - `Makefile`
 - `LICENSE`
 - `BUILD-INFO.txt`
+- `ACKNOWLEDGEMENTS.md`
+- `NOTICE`
 
 ## Upstream
 
 - Original: https://github.com/woshigenm/CVE-2026-99491
 - Source snapshot: https://github.com/Aoki-Shinshi/CVE-2026-99491 (commit `db85108f872ba673291790c0fa72d598abaadc02`)
+- Fix12 profiles: https://github.com/Aoki-Shinshi/CVE-2026-99491-FANXIAOCHAO (commit `a5d970935dac14b7c8b0aff865322c656c8d550e`)
 - License: GPL-2.0-only
 
 ## GPL rights
