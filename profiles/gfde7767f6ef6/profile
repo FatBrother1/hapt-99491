@@ -1,0 +1,24 @@
+# 6.12.38-android16-5-gfde7767f6ef6-abogki481467632-4k sha=48b622a20a700cdde0b8f2f6e83959df00a7efedf52f347377cf542f7b58948e
+# generated from local vmlinux BTF
+worker_link=0xffffffc0808af1dc
+kaslr_idx=2288
+dev_evbit=40
+dev_swbit=200
+dev_sw=448
+dev_num_vals=1504
+dev_max_vals=1508
+dev_vals=1512
+cred_req=184
+blob_req_min=24
+blob_req_max=32
+avc_req=72
+cred_site_low21=0
+blob_site_low21=0
+avc_site_low21=0
+cred_euid_off=0x14
+cred_cap1=0x3e
+cred_cap2=0x42
+cred_cap3=0x46
+cred_fsuid_off=0x20
+trace_layout=0
+min_pairs=1

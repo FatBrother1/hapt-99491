@@ -1,0 +1,24 @@
+# 6.18.21-android17-5-g928d1bb4f1d7-abogki542339678-4k sha=65fc12d5c39002c5f2ff2e14c439f9c3fb7489272450a7224cc84acd0a8a4705
+# generated from local vmlinux BTF
+worker_link=0xffffffc080f865ac
+kaslr_idx=2286
+dev_evbit=40
+dev_swbit=200
+dev_sw=448
+dev_num_vals=1512
+dev_max_vals=1516
+dev_vals=1520
+cred_req=184
+blob_req_min=40
+blob_req_max=40
+avc_req=72
+cred_site_low21=0
+blob_site_low21=0
+avc_site_low21=0
+cred_euid_off=0x14
+cred_cap1=0x3e
+cred_cap2=0x42
+cred_cap3=0x46
+cred_fsuid_off=0x20
+trace_layout=618
+min_pairs=1

@@ -1,0 +1,21 @@
+# 6.12.38 g4b36; worker from vmlinux; BTF 6.12
+worker_link=0xffffffc0808b2064
+dev_evbit=40
+dev_swbit=200
+dev_sw=448
+dev_num_vals=1504
+dev_max_vals=1508
+dev_vals=1512
+cred_req=184
+blob_req_min=24
+blob_req_max=32
+avc_req=72
+cred_site_low21=0
+blob_site_low21=0
+avc_site_low21=0
+cred_euid_off=0x14
+cred_cap1=0x3e
+cred_cap2=0x42
+cred_cap3=0x46
+cred_fsuid_off=0x20
+min_pairs=1

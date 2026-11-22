@@ -1,0 +1,8 @@
+build/
+dist/*.zip
+dist/per-kernel/
+dist/exp99491
+dist/kernels.tsv
+dist/MANIFEST.tsv
+*.tmp
+__pycache__/

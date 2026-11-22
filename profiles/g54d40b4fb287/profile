@@ -1,0 +1,24 @@
+# 6.1.99-android14-11-g54d40b4fb287 sha=8ba4bc10fc39f61631e363b0e07eebaa8804f149f683672ebdc0f29764b91611
+# generated from local vmlinux BTF
+worker_link=0xffffffc008e82784
+kaslr_idx=2288
+dev_evbit=40
+dev_swbit=200
+dev_sw=464
+dev_num_vals=1520
+dev_max_vals=1524
+dev_vals=1528
+cred_req=176
+blob_req_min=24
+blob_req_max=32
+avc_req=72
+cred_site_low21=0
+blob_site_low21=0
+avc_site_low21=0
+cred_euid_off=0x10
+cred_cap1=0x36
+cred_cap2=0x3a
+cred_cap3=0x3e
+cred_fsuid_off=0x1c
+trace_layout=0
+min_pairs=1

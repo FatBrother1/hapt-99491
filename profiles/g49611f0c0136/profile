@@ -1,0 +1,24 @@
+# 5.15.180-android13-8-g49611f0c0136 sha=dbbe7efdc7ef15ce54886bec7c9ba3193db41fd5bc4e9c2fcc2daaad9d11a79b
+# generated from local vmlinux BTF
+worker_link=0xffffffc0091dafd8
+kaslr_idx=2288
+dev_evbit=40
+dev_swbit=200
+dev_sw=448
+dev_num_vals=1384
+dev_max_vals=1388
+dev_vals=1392
+cred_req=176
+blob_req_min=24
+blob_req_max=32
+avc_req=72
+cred_site_low21=0
+blob_site_low21=0
+avc_site_low21=0
+cred_euid_off=0x10
+cred_cap1=0x36
+cred_cap2=0x3a
+cred_cap3=0x3e
+cred_fsuid_off=0x1c
+trace_layout=0
+min_pairs=1

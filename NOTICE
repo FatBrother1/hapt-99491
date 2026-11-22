@@ -1,0 +1,21 @@
+hapt-99491
+CVE-2026-99491 HAPT plugin
+
+Copyright (C) 2026 the hapt-99491 contributors.
+Portions derived from woshigenm/CVE-2026-99491 and
+Aoki-Shinshi/CVE-2026-99491; copyright remains with their respective authors.
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, version 2 of the License only.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program. If not, see <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>.
+
+HAPT (com.aoki.honorroot) is a separate work. It does not link or include this
+source; it executes the separately distributed plugin. HAPT is not covered by
+this repository's GPL grant.
