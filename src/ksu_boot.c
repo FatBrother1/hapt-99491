@@ -429,18 +429,21 @@ static int ksu_load_module(void)
     {
         long rc = syscall(SYS_finit_module, fd, "allow_shell=1", 0);
         int fe = errno;
-        int enf;
 
         close(fd);
-        /* Close the window immediately, before any logging or
-         * userspace work. */
-        write_text_file("/sys/fs/selinux/enforce", "1");
-        enf = read_int_file("/sys/fs/selinux/enforce");
         printf("[ksu] finit_module=%ld errno=%d enforce=%d\n", rc, fe,
-               enf);
+               read_int_file("/sys/fs/selinux/enforce"));
         ksu_sync();
-        if (rc != 0)
+        if (rc != 0) {
+            write_text_file("/sys/fs/selinux/enforce", "1");
+            printf("[ksu] enforcing restored: %d\n",
+                   read_int_file("/sys/fs/selinux/enforce"));
             return -1;
+        }
+        /* Keep the window open: ksud must be copied into /data/adb and
+         * installed, and the shell domain cannot reach /data/adb while
+         * enforcing.  ksu_boot_inline restores it after userspace. */
+        return 0;
     }
     return 0;
 }
@@ -512,14 +515,14 @@ int ksu_boot_inline(unsigned long long slide, const char *syms_path)
                    read_int_file("/sys/fs/selinux/enforce"));
             return -1;
         }
-        /* The permissive window only has to cover finit_module; the
-         * remaining steps are kernel ioctls plus the ksu domain. */
-        write_text_file("/sys/fs/selinux/enforce", "1");
-        printf("[ksu] enforcing restored after finit_module: %d\n",
+        /* Stays permissive until ksud install finishes; the shell
+         * domain needs to create /data/adb/ksud and /data/adb/ksu. */
+        printf("[ksu] permissive window kept for ksud install (enforce=%d)\n",
                read_int_file("/sys/fs/selinux/enforce"));
     } else {
         printf("[ksu] kernelsu already live, skipping finit_module\n");
-        write_text_file("/sys/fs/selinux/enforce", "1");
+        /* Same reason as the fresh-load path: ksud install needs the
+         * permissive window.  ksu_boot_inline restores it afterwards. */
     }
     printf("[ksu] module live\n");
     fails = ksu_install_userspace();

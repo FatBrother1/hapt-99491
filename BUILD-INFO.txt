@@ -1,7 +1,11 @@
 source: https://github.com/Aoki-Shinshi/CVE-2026-99491
 commit: db85108f872ba673291790c0fa72d598abaadc02
-exp99491 sha256: a692f1a712352776ad903d80c53a0b78161b30c245e74d6f0d2027dc830da67f
-exp99491 size: 187352
+exp99491 sha256: 26f0d82847c2504cfd4cfa5d495a63fe2488b486d955ef5d68fda9ff4f0dffce
+exp99491 size: 187160
 build: NDK=android-ndk-r29 API=24 ARCH=arm64; make build/exp
 note: exp99491 is built from this source; the plugin ZIP is separately
       distributed and is not bundled inside the HAPT APK.
+patch: 2.1.1 keeps the SELinux permissive window open through ksud
+       copy/install, so a fresh boot without a pre-existing /data/adb/ksud
+       can complete the userspace stage (shell domain cannot reach
+       /data/adb while enforcing).
